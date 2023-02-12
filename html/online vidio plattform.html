@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Video-Plattform</title>
+  <style>
+    body {
+      background-color: lightblue;
+    }
+
+    .red-stripe {
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      background-color: blue;
+      left: 0;
+      top: 0;
+      animation: move-stripe 5s linear infinite;
+    }
+
+    @keyframes move-stripe {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+
+    .login-button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="red-stripe"></div>
+  <h1>Willkommen auf unserer Online-Video-Plattform</h1>
+  
+  <form action="upload_video.php" method="post" enctype="multipart/form-data">
+    <h2>Video hochladen</h2>
+    <input type="file" name="video_file">
+    <br><br>
+    <input type="submit" value="Hochladen">
+  </form>
+  
+  <h1>fügbare Videos</h1>
+  <table>
+    <tr>
+      <th>Video-Titel</th>
+      <th>Ansehen</th>
+      <th>Kommentare</th>
+    </tr>
+    <tr>
+      <td>Minecraft bedrock 1</td>
+      <td><a href="watch_video.mp4?id=1">Ansehen</a></td>
+      <td><a href="Minecraft bedrock Kommentare.txt?id=1">Kommentare ansehen</a></td>
+    </tr>
+    <tr>
+      <td>Ich REAGIERE auf Thorpri 🧐 Ich REAGIER auf KLEINE YouTuber_Euch _ Part 10 _ Rob 2</td>
+      <td><a href="Ich REAGIERE auf Thorpri 🧐 Ich REAGIER auf KLEINE YouTuber_Euch _ Part 10 _ Rob.mp4?id=2">Ansehen</a></td>
+      <td><a href="Ich REAGIERE auf Thorpri.txt?id=2">Kommentare ansehen</a></td>
+    </tr>
+    <!-- Hier können weitere Video-Einträge hinzugefügt werden -->
+  </table>
+  <button class="login-button" onclick="window.location.href='login.php'">Anmelden</button>
+</body>
+</html>
